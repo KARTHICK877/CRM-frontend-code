@@ -1,1 +1,1 @@
-export const API = "http://localhost:8000/";
+export const API = "https://shaibuhan-crm-capstone-czfq.onrender.com/";
