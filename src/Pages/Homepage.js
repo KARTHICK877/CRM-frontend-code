@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 import heroBackground from "../Assets/img6.jpg";
 import about from "../Assets/about pic.jpg";
 import con from "../Assets/con1.jpg";
 import interior from "../Assets/interior.jpg";
 import villa from "../Assets/villa1.jpg";
 import { ThreeDots } from "react-loader-spinner";
-
+import { BarLoader } from "react-spinners";
 export default function HomePage() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false); // Define loading state
@@ -28,7 +28,11 @@ export default function HomePage() {
       setLoading(false);
     }
   };
-
+  const handleLogout = () => {
+    setLoading(true);
+    
+    navigate('/Logins');
+  };
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleToggleClick = () => {
@@ -323,7 +327,7 @@ export default function HomePage() {
             form below, and one of our representatives will respond to you
             promptly.
           </p>
-          <form
+          {/* <form
             action="#"
             className="bg-white rounded-lg p-6 shadow-lg mx-auto max-w-screen-md"
           >
@@ -357,7 +361,7 @@ export default function HomePage() {
             >
               Send Now
             </a>
-          </form>
+          </form> */}
         </div>
       </section>
 
@@ -365,10 +369,25 @@ export default function HomePage() {
       <footer className="bg-gray-800 text-white py-4">
         <div className="container mx-auto text-center">
           <p className="text-gray-500">
-            All Right Reserved By @www.buildit.com
+            {/* All Right Reserved By @www.buildit.com */}
           </p>
         </div>
+
       </footer>
+      <button
+      className="btn btn-warning p-2 md:p-4 lg:p-4"
+      onClick={handleLogout}
+      disabled={loading}
+    >
+      {loading ? (
+        <BarLoader color={"#ffffff"} loading={loading} />
+      ) : (
+        <React.Fragment>
+          Logout
+          <Link to='/Logins'></Link> {/* Move Link component here */}
+        </React.Fragment>
+      )}
+    </button>
     </div>
   );
 }

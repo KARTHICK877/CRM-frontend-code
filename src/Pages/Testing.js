@@ -25,20 +25,20 @@ function Testing() {
             ADMIN
           </h1>
           <div className="text">
-            Email: admin@gmail.com <br />
-            password: amanager@gmail.com
+            Email:admin@gmail.com <br />
+            password:admin@gmail.com
           </div>
           <h1 className="text" style={{ color: 'yellow' }}>
             Manager
           </h1>
           <div className="text">
-            Email: manager@gmail.com password: manager@gmail.com
+            Email:manager@gmail.com password:manager@gmail.com
           </div>
           <h1 className="text" style={{ color: 'whitesmoke' }}>
             Employee
           </h1>
           <div className="text">
-            Email:  employee@gmail.com password: employee@gmail.com
+            Email:employee@gmail.com password:employee@gmail.com
           </div>
           <button className="btn btn-primary" onClick={handleBackToLogin} disabled={loading}>
             {loading ? 'Loading...' : 'Back to Login'}

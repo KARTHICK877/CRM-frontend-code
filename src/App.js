@@ -14,11 +14,15 @@ import EditRequest from "./Components/ServiceRequest/editRqst";
 import RequestList from "./Components/ServiceRequest/rqstList";
 import HomePage from "./Pages/Homepage";
 import Testing from "./Pages/Testing.js";
+import Registration from "./Pages/Registration.js";
+import Logins from "./Pages/Logins.js";
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<HomePage />} />
+      <Route exact path="/" element={<Registration />} />
+      <Route exact path="/Logins" element={<Logins />} />
+       <Route exact path="/HomePage" element={<HomePage />} />  
         <Route path="/login" element={<LoginPage />} />
         <Route path="/author" element={<Testing />} />
         <Route path="/users/add" element={<AddUsers />} />

@@ -52,7 +52,7 @@ This CRM system is designed to facilitate the management of customer inquiries a
 
 ## Frontend Deployed Website : https://shaibuhan-crm-frontend.netlify.app/
 
-## Backend Deployed Url: https://shaibuhan-crm-capstone-czfq.onrender.com
+## Backend Deployed Url: https://shaibuhan-crm-capstone-guvi-in.onrender.com
 
 ## Github Repositories
 
@@ -71,7 +71,7 @@ password: admin@gmail.com
 ### For Manager Sign in
 
 email : manager@gmail.com
-
+`
 password: manager@gmail.com
 
 ### For Employee Sign in

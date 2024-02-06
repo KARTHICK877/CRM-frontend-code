@@ -20,7 +20,7 @@ function TopBar() {
 
       dispatch(logoutUser());
       localStorage.removeItem("token");
-      navigate("/");
+      navigate("/HomePage");
     } catch (error) {
       console.error("Logout failed. Error:", error);
       // Handle error if needed
